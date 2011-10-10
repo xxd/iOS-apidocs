@@ -25,14 +25,11 @@ module GitHub
         head.each do |key, value|
           case key
             when :pagination
-              lines << 'Link: <https://api.github.com/resource?page=2>; rel="next",'
-              lines << '      <https://api.github.com/resource?page=5>; rel="last"'
+              lines << 'Link: <https://mayday.fm:3000/resource?page=2>; rel="next",'
+              lines << '      <https://mayday.fm:3000/resource?page=5>; rel="last"'
             else lines << "#{key}: #{value}"
           end
         end
-
-        lines << "X-RateLimit-Limit: 5000"
-        lines << "X-RateLimit-Remaining: 4999"
 
         %(<pre class="#{css_class}"><code>#{lines * "\n"}</code></pre>\n)
       end
@@ -56,11 +53,83 @@ module GitHub
     end
 
     USER = {
-      "login"        => "octocat",
-      "id"           => 1,
-      "avatar_url"   => "https://github.com/images/error/octocat_happy.gif",
-      "url"          => "https://api.github.com/users/octocat"
+      "id"         => 1,
+      "username"   => "vvdpzz",
+      "realname"   => "Zheng-Yu Chen",
+      "avatar_url" => "http://luexiao.com/avatar/vvdpzz.png",
+      "url"        => "http://luexiao.com/users/vvdpzz"
     }
+    
+    QUESTION = {
+      "id"                => 1,
+      "user"              => USER,
+      "title"             => "Question Title",
+      "content"           => "Description of the question, this field is optional.",
+      "credit"            => 10,
+      "money"             => 5,
+      "answers_count"     => 2,
+      "votes_count"       => 3,
+      "voted"             => 1,
+      "correct_answer_id" => 0,
+      "created_at"        => "2011-11-14T04:33:35Z",
+      "updated_at"        => "2011-11-16T04:33:35Z",
+      "answers"           => [
+        {
+          "id"            => 1,
+          "user"          => USER,
+          "content"       => "Content of the answer.",
+          "is_correct"    => true,
+          "votes_count"   => 10,
+          "voted"         => 0,
+          "created_at"    => "2011-11-14T04:33:35Z"
+        },
+        {
+          "id"            => 2,
+          "user"          => USER,
+          "content"       => "Content of the answer.",
+          "is_correct"    => false,
+          "votes_count"   => 3,
+          "voted"         => -1,
+          "created_at"    => "2011-11-14T04:33:35Z"
+        }
+      ]
+    }
+    
+    ONLY_QUESTION = {
+      "id"                => 1,
+      "user"              => USER,
+      "title"             => "Question Title",
+      "content"           => "Description of the question, this field is optional.",
+      "credit"            => 10,
+      "money"             => 10,
+      "answers_count"     => 0,
+      "votes_count"       => 0,
+      "voted"             => 0,
+      "correct_answer_id" => 0,
+      "created_at"        => "2011-11-14T04:33:35Z",
+      "updated_at"        => "2011-11-16T04:33:35Z"
+    }
+    
+    QUESTIONS = [
+      {
+        "title"             => "Question Title",
+        "credit"            => 10,
+        "money"             => 5,
+        "answers_count"     => 2,
+        "votes_count"       => 3,
+        "correct_answer_id" => 0,
+        "created_at"        => "2011-11-14T04:33:35Z"
+      },
+      {
+        "title"             => "Question Title",
+        "credit"            => 10,
+        "money"             => 5,
+        "answers_count"     => 2,
+        "votes_count"       => 3,
+        "correct_answer_id" => 0,
+        "created_at"        => "2011-11-14T04:33:35Z"
+      }
+    ]
 
     FULL_USER = USER.merge({
       "name"         => "monalisa octocat",
