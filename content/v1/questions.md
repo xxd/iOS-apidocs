@@ -7,7 +7,7 @@ title: 问题 API
 ## 付费问题列表
 列出付费问题:
 
-    GET /questions/paid
+    GET /questions/paid.json
 
 ### Response
 <%= headers 200, :pagination => true %>
@@ -17,7 +17,7 @@ title: 问题 API
 ## 免费问题列表
 列出免费问题:
 
-    GET /questions/free
+    GET /questions/free.json
 
 ### Response
 <%= headers 200, :pagination => true %>
@@ -27,7 +27,7 @@ title: 问题 API
 
 显示一个指定的问题:
 
-    GET /questions/:id
+    GET /questions/:id.json
 
 ### Response
 
@@ -36,7 +36,7 @@ title: 问题 API
 
 ## 创建问题
 
-    POST /questions
+    POST /questions.json
 
 ### 输入
 
@@ -49,24 +49,29 @@ content
 credit
 : _Optional_ **integer**
 
-money
+reputation
 : _Optional_ **integer**
 
+end_date
+: _Optional_ **datetime**
+
+
 <%= json \
-	:title => "Question title",
-  :content => "Description of the question, this field is optional.",
-  :credit  => 10,
-	:money => 10
+		 :title  => "Question title",
+	   :content  => "Description of the question, this field is optional.",
+	:reputation  => 10,
+	  	 :money  => 10,
+	  :end_date  => "2011-12-30 00:00:00"
 %>
 
 ### Response
 
-<%= headers 201, :Location => "https://luexiao.com/api/questions/1" %>
+<%= headers 201, :Location => "http://luexiao.com/api/questions/1" %>
 <%= json :only_question %>
 
 ## 收藏问题
 
-    PUT /questions/:id/star
+    PUT /questions/:id/favorite.json
 
 ### Response
 
@@ -74,7 +79,7 @@ money
 
 ## 取消收藏问题
 
-    DELETE /questions/:id/star
+    DELETE /questions/:id/favorite.json
 
 ### Response
 
@@ -82,7 +87,7 @@ money
 
 ## 检测问题是否已收藏
 
-    GET /questions/:id/star
+    GET /questions/:id/favorite.json
 
 ### 问题已收藏的响应
 
@@ -94,7 +99,7 @@ money
 
 ## 关注问题
 
-    PUT /questions/:id/follow
+    PUT /questions/:id/follow.json
 
 ### Response
 
@@ -102,7 +107,7 @@ money
 
 ## 取消关注问题
 
-    DELETE /questions/:id/follow
+    DELETE /questions/:id/follow.json
 
 ### Response
 
@@ -110,7 +115,7 @@ money
 
 ## 检测问题是否已关注
 
-    GET /questions/:id/follow
+    GET /questions/:id/follow.json
 
 ### 问题已关注的响应
 

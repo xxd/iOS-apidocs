@@ -25,8 +25,8 @@ module GitHub
         head.each do |key, value|
           case key
             when :pagination
-              lines << 'Link: <https://mayday.fm:3000/resource?page=2>; rel="next",'
-              lines << '      <https://mayday.fm:3000/resource?page=5>; rel="last"'
+              lines << 'Link: <http://luexiao.com/resource?page=2>; rel="next",'
+              lines << '      <http://luexiao.com/resource?page=5>; rel="last"'
             else lines << "#{key}: #{value}"
           end
         end
@@ -66,7 +66,7 @@ module GitHub
       "title"             => "Question Title",
       "content"           => "Description of the question, this field is optional.",
       "credit"            => 10,
-      "money"             => 5,
+ "reputation"             => 5,
       "answers_count"     => 2,
       "votes_count"       => 3,
       "voted"             => 1,
@@ -100,8 +100,9 @@ module GitHub
       "user"              => USER,
       "title"             => "Question Title",
       "content"           => "Description of the question, this field is optional.",
-      "credit"            => 10,
-      "money"             => 10,
+  "reputation"            => 10,
+      "credit"             => 10,
+      "end_date"          => "2011-12-30 00:00:00",
       "answers_count"     => 0,
       "votes_count"       => 0,
       "voted"             => 0,
@@ -113,8 +114,8 @@ module GitHub
     QUESTIONS = [
       {
         "title"             => "Question Title",
-        "credit"            => 10,
-        "money"             => 5,
+    "reputation"            => 10,
+       "credit"             => 5,
         "answers_count"     => 2,
         "votes_count"       => 3,
         "correct_answer_id" => 0,
@@ -122,8 +123,8 @@ module GitHub
       },
       {
         "title"             => "Question Title",
-        "credit"            => 10,
-        "money"             => 5,
+    "reputation"            => 10,
+       "credit"             => 5,
         "answers_count"     => 2,
         "votes_count"       => 3,
         "correct_answer_id" => 0,

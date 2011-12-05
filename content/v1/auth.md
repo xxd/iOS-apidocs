@@ -23,7 +23,7 @@ title: Auth | Luexiao API
 	:realname => "Zheng-Yu Chen",
 	:email => "vvdpzz@gmail.com",
 	:credit => 10000,
-	:money => 10000,
+	:reputation => 10000,
 	:authentication_token => "CuzcnFkzzShumgHux7St",
 	:about_me => "ACMer"
 %>
