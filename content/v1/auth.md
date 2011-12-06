@@ -19,8 +19,7 @@ title: Auth | Luexiao API
 <%= headers 201 %>
 <%= json \
 	:id => 1,
-	:username => "vvdpzz",
-	:realname => "Zheng-Yu Chen",
+	:name => "vvdpzz",
 	:email => "vvdpzz@gmail.com",
 	:credit => 10000,
 	:reputation => 10000,

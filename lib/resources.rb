@@ -54,8 +54,7 @@ module GitHub
 
     USER = {
       "id"         => 1,
-      "username"   => "vvdpzz",
-      "realname"   => "Zheng-Yu Chen",
+      "name"       => "vvdpzz",
       "avatar_url" => "http://luexiao.com/avatar/vvdpzz.png",
       "url"        => "http://luexiao.com/users/vvdpzz"
     }

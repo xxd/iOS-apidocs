@@ -1,10 +1,10 @@
 ---
-title: Answers | Luexiao API
+title: 答案 API
 ---
 
-## 创建问题
+## 创建答案
 
-    POST /answers
+    POST /answers.json
 
 ### 输入
 
@@ -23,3 +23,15 @@ content
 
 <%= headers 201, :Location => "http://luexiao.com/questions/3508419221601184" %>
 <%= json :question %>
+
+### 答案已关注的响应
+
+<%= headers 204 %>
+
+### 答案没有关注的响应
+
+<%= headers 404 %>
+
+### 接受答案
+
+	GET    /questions/:question_id/answers/:id/accept.json
