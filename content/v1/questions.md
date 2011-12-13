@@ -66,7 +66,7 @@ end_date
 
 ### Response
 
-<%= headers 201, :Location => "http://luexiao.com/api/questions/1" %>
+<%= headers 201, :Location => "http://luexiao.com/questions/1" %>
 <%= json :only_question %>
 
 ## 收藏问题

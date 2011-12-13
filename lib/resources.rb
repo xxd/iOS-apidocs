@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'pp'
 require 'yajl/json_gem'
 require 'stringio'
@@ -110,6 +111,24 @@ module GitHub
       "updated_at"        => "2011-11-16T04:33:35Z"
     }
     
+    USER_ACTIVITY = {
+      "content"             =>  "liyuanyuan is following demo",
+      "created_at"          => "2011-12-09T20:05:32+08:00",
+      "following_id"        => 6138205315089137,
+      "id"                  => 7595293919904413,
+      "updated_at"          => "2011-12-09T20:05:32+08:00",
+          "user_id"             => 1917042666497033
+        }
+      
+    QUESTION_ACTIVITY = {
+       "content"             => "question 1 has a new answer",
+       "created_at"          => "2011-11-09T20:05:32+08:00",
+       "following_id"        => 1508913761382053,
+       "id"                  => 1990441375952939,
+       "updated_at"          => "2011-11-09T20:05:32+08:00",
+       "user_id"             => 6649703319170426
+         }
+    
     QUESTIONS = [
       {
         "title"             => "Question Title",
@@ -130,7 +149,7 @@ module GitHub
         "created_at"        => "2011-11-14T04:33:35Z"
       }
     ]
-
+      
     FULL_USER = USER.merge({
       "name"         => "monalisa octocat",
       "company"      => "GitHub",
