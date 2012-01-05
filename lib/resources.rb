@@ -111,13 +111,28 @@ module GitHub
       "updated_at"        => "2011-11-16T04:33:35Z"
     }
     
+    LOCATION = [
+      {         "_id" => "4f0542773c458834cd000002", 
+        "question_id" => "2022440111077375", 
+     "question_title" => "abc", 
+       "receive_time" => "2012-01-05T06:25:59Z", 
+           "long_lat" => "[ 109.77539, 33.43144 ]"
+      },              
+      {         "_id" => "4f0409fea27a13222f000002", 
+        "question_id" => "2769266624659282", 
+     "question_title" => "abc", 
+       "receive_time" => "2012-01-04T08:12:46Z", 
+           "long_lat" => "[ 116.4074, 39.9042 ]"
+      }
+    ]
+    
     USER_ACTIVITY = {
       "content"             =>  "liyuanyuan is following demo",
       "created_at"          => "2011-12-09T20:05:32+08:00",
       "following_id"        => 6138205315089137,
       "id"                  => 7595293919904413,
       "updated_at"          => "2011-12-09T20:05:32+08:00",
-          "user_id"             => 1917042666497033
+          "user_id"         => 1917042666497033
         }
       
     QUESTION_ACTIVITY = {

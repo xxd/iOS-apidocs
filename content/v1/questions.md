@@ -55,13 +55,21 @@ reputation
 end_date
 : _Optional_ **datetime**
 
+longtitude
+: _Optional_ but _Required for iOS_ **float**
+
+latitude
+: _Optional_ but _Required for iOS_ **float**
 
 <%= json \
+:question => {
 		 :title  => "Question title",
 	   :content  => "Description of the question, this field is optional.",
 	:reputation  => 10,
 	  	 :money  => 10,
-	  :end_date  => "2011-12-30 00:00:00"
+	  :end_date  => "2011-12-30 00:00:00"},
+	:longtitude  => 109.77539,
+	  :latitude  => 33.43144
 %>
 
 ### Response
